@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/neat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>launchMechs </title>
+</head>
+<body>
+    <div class="topBarContainer">
+        <div id="pageTitle" class="title">
+            <h1 >Launch Mechanics</h1>
+        </div>
+        <div id="credits" class="title">
+            <h2 >By: Dumbtex</h2>
+        </div>
+    </div>
+       
+    <div class="inputContainer">
+     <h1 id="inputs" class="title" >Inputs</h1>   
+        <form action="javascript:calculate()">
+            <div class="variableInput" id="counterweight">
+                <label for="counterweights">Counterweight</label>
+                <input name="counterweight" id="counterweights" class="required" type="number" step=".001" placeholder="kg" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="launchweight">
+                <label for="launchWeights">Projectile Weight</label>
+                <input name="launchWeight" id="launchWeights" class="required" type="number" step=".001" placeholder="kg" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="angleOfLaunch">
+                <label for="angleOfLaunchs">Launch Angle</label>
+                <input name="angleOfLaunch" id="angleOfLaunchs" class="required" type="number" step=".001" placeholder="degrees" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="angleOfApproach">
+                <label for="angleOfApproachs">Approach Angle</label>
+                <input name="approachAngle" id="angleOfApproachs" class="required" type="number" step=".001" placeholder="degrees" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="armLengthWeightSide">
+                <label for="armLengthWeightSides">Input Arm Length</label>
+                <input name="weightSideArmLength" id="armLengthWeightSides" class="required" type="number" step=".001" placeholder="meters" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="armLengthLaunchSide">
+                <label for="armLengthLaunchSides">Output Arm Length</label>
+                <input name="launchSideArmLength" id="armLengthLaunchSides" class="required" type="number" step=".001" placeholder="meters" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="height">
+                <label for="heights">Launch Height</label>
+                <input name="height" id="heights" class="required" type="number" step=".001" placeholder="meters" onkeyup="submitability()">
+            </div>
+            <div class="variableInput" id="distance">
+                <h2 id="distance"></h2>
+            </div>
+            
+            <div class="submit" id="submitBtn">
+                <input name="Submit" type="submit" disabled>
+            </div>
+        </form>
+
+
+    </div>
+
+
+    <div class="mcDiagramHolder" id="mcDiagramHolderr">
+        <div class="mcdiagram" id="mcDiagram">
+            <img src="images/launchMechDiagram.jpg" alt="error" id="diagramMcc" >
+        </div>
+            
+    </div>
+
+    <div class="graphContainer">
+        <div id="graph">
+            
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html> 
